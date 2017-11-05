@@ -1,6 +1,10 @@
 # od_compressed_image_transport
 On Demand Compression and Decompression for ROS. 
 
+## Problem Solved
+
+Currently, the ROS image transport node that does compression and decompression automatically subscribes to the topic it is applyinbg said operation to even when we are not subscribing to it. This wastes resources on sensor or camera nodes by keeping the camera on. This is an extension to the existing compression/decompression node that only subscribes to the topic you want to decompress/compress when you subscribe to the output topic of the cfompression/decompression node.
+
 ## Example
 
 ```
